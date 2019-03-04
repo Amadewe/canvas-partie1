@@ -13,19 +13,21 @@ ctx.lineTo(300,150); //coin suppérieur droite de ma maison
 ctx.lineTo(300,300); //coin inférieur droite de ma maison
 ctx.lineTo(100,300); //coin inférieur gauche
 ctx.lineTo(100,150); //coin suppérieur gauche
-// closePath permet de finir le trac et revient au point d'origine.
-ctx.closePath(); // Fermeture du chemin
+// fillStyle est un attribut
 ctx.fillStyle = '#a1d8e6'; // Définition de la couleur de remplissage
 ctx.fill();  // Remplissage du dernier chemin tracé
+// closePath permet de finir le trac et revient au point d'origine.
+ctx.closePath(); // Fermeture du chemin
 
 //toit
 ctx.beginPath();
 ctx.moveTo(200,50);
 ctx.lineTo(300,150);
 ctx.lineTo(100,150);
-ctx.closePath();
 ctx.fillStyle = '#d7823e';
 ctx.fill();
+ctx.closePath();
+
 
 // fenêtre de gauche
 ctx.beginPath();
@@ -33,9 +35,9 @@ ctx.moveTo(120,160);
 ctx.lineTo(170,160);
 ctx.lineTo(170,200);
 ctx.lineTo(120,200);
-ctx.closePath();
 ctx.fillStyle = '#c9c9c9';
 ctx.fill();
+ctx.closePath();
 
 // fenêtre de droite
 ctx.beginPath();
@@ -43,9 +45,9 @@ ctx.moveTo(230,160);
 ctx.lineTo(280,160);
 ctx.lineTo(280,200);
 ctx.lineTo(230,200);
-ctx.closePath();
 ctx.fillStyle = '#c9c9c9';
 ctx.fill();
+ctx.closePath();
 
 // porte
 ctx.beginPath();
@@ -53,6 +55,6 @@ ctx.moveTo(170,230);
 ctx.lineTo(230,230);
 ctx.lineTo(230,300);
 ctx.lineTo(170,300);
-ctx.closePath();
 ctx.fillStyle = '#c9c9c9';
 ctx.fill();
+ctx.closePath();

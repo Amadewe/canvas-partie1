@@ -5,14 +5,23 @@ var c = document.getElementById('house');
 // Le contexte sera l'élément central de gestion de Canvas.
 var ctx = c.getContext("2d");
 
-// toit
-ctx.fillStyle = "#d7823e";
-ctx.rotate(45 * Math.PI / 180);
-ctx.fillRect(150, -130, 140, 140);
+// toit avec rotate
+// ctx.fillStyle = "#d7823e";
+// ctx.rotate(45 * Math.PI / 180);
+// ctx.fillRect(150, -130, 140, 140);
+
+//toit avec les lignes
+ctx.beginPath();
+ctx.moveTo(200,50);
+ctx.lineTo(300,120);
+ctx.lineTo(100,120);
+ctx.fillStyle = '#d7823e';
+ctx.fill();
+ctx.closePath();
 
 ctx.fillStyle = "#a1d8e6";
 //  fillRect(startx, starty, hauteur, largeur)
-ctx.rotate(-45 * Math.PI / 180);
+// ctx.rotate(-45 * Math.PI / 180);
 ctx.fillRect(100, 115, 200, 200);
 
 //carré fenêtre gauche
