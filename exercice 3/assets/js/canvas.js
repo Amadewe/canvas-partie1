@@ -1,4 +1,4 @@
-// getElementById() qui va permettre d'aller chercher et cibler l'élément <canvas> identifié par son attribut id unique (içi house)
+// getElementById() qui va permettre d'aller chercher et cibler l'élément <canvas> identifié par son attribut id unique
 var c = document.getElementById('car');
 // la méthode getContext() de l'élément ainsi récupéré pour savoir dans quel contexte de dessin (2D ou 3D) le script va pouvoir agir,
 // et de quelles fonctions il pourra disposer.
@@ -6,11 +6,12 @@ var c = document.getElementById('car');
 var ctx = c.getContext('2d');
 
 //corps de la voiture
+// le begin Path n'est pas obligatoire quand on crée que des formes (avec fillRect) idem pour arc
 ctx.beginPath();
 ctx.fillStyle = '#00a551';
 ctx.fillRect(100, 50, 300, 100);
 ctx.fill();
-// pour "gommer" en haut à gauche
+// pour "gommer" en haut à gauche et à droite
 //  clearRect(startx, starty, hauteur, largeur)
 ctx.clearRect(100, 50, 50, 50);
 ctx.clearRect(350, 50, 50, 50);
@@ -25,14 +26,14 @@ ctx.beginPath();
 // et le sens de rotation est contraire aux aiguilles d'une montre lorsqu'il vaut true.
 ctx.arc(150, 190, 40, 0 ,Math.PI*2,true);
 ctx.strokeStyle = '#696969';
-ctx.fillStyle = '#cdcdcd';
 ctx.stroke();
+ctx.fillStyle = '#cdcdcd';
 ctx.fill();
 
 // la roue gauche
 ctx.beginPath();
 ctx.arc(350, 190, 40, 0 ,Math.PI*2,true);
 ctx.strokeStyle = '#696969';
-ctx.fillStyle = '#cdcdcd';
 ctx.stroke();
+ctx.fillStyle = '#cdcdcd';
 ctx.fill();
